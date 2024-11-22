@@ -17,6 +17,14 @@ export class HeroesListComponent {
   }
 
   loadCharacters(page: number = 1): void {
-    this.heroes = this.heroesService.getAllHeroes()
+    this.heroes =  this.heroesService.getHeroesByPage(page)
+    console.log(this.heroes)
   }
+
+  onPageChanged(page: number) {
+    this.heroes =  this.heroesService.getHeroesByPage(page)
+    console.log(this.heroes)
+  }
+
+  
 }

@@ -1,19 +1,18 @@
-<!-- <div class="container-fluid bg-dark text-light py-4 p-5">
-  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
-    <div class="col" *ngFor="let hero of heroes">
-          <div class="card bg-secondary" >
-              <img src="{{hero.image}}" class="card-img-top" >
-              <div class="card-body">
-                  <p class="card-text text-light">{{ hero.name }}</p>
-              </div>
+<app-search></app-search>
+
+<div class="container-fluid bg-dark text-light py-4 p-5">
+    <div class="row g-4">
+      <!-- Repite las tarjetas hasta llenar las 12 posiciones -->
+      <div class="col-6 col-md-3 " *ngFor="let hero of heroes.slice(0, 12)">
+        <div class="card bg-secondary custom-card">
+          <img [src]="hero.image" class="card-img-top custom-img">
+          <div class="card-body">
+            <p class="card-text text-light">{{ hero.name }}</p>
           </div>
+        </div>
       </div>
+    </div>
   </div>
-
-  <h1>hola</h1>
   
- AGREGAR PAGINATOR 
+  <app-paginator (pageChanged)="onPageChanged($event)"></app-paginator>
 
-</div> -->
-
-<h1>hola</h1>

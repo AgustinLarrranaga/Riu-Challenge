@@ -1,13 +1,16 @@
 <nav aria-label="Page navigation" class="mt-4">
     <ul class="pagination justify-content-center">
-    <li class="page-item">
-        <a class="page-link bg-secondary text-light" [ariaDisabled]="currentPage === 1" (click)="previousPage()">Previous</a>
-    </li>
-    <li class="page-item" *ngFor="let page of filteredPages" > 
-        <a class="page-link bg-secondary text-light" (click)="goToPage(page)"> {{ page }} </a>
-    </li>
-    <li class="page-item">
-        <a class="page-link bg-secondary text-light" (click)="nextPage()">Next</a>
-    </li>
+        <li class="page-item">
+            <a class="page-link bg-secondary text-light cursor-pointer" 
+               (click)="previousPage()">Previous</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link bg-secondary text-light cursor-pointer" >{{ currentPage }}</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link bg-secondary text-light cursor-pointer" 
+            [ariaDisabled]="currentPage === totalPages" 
+               (click)="nextPage()">Next</a>
+        </li>
     </ul>
 </nav>

@@ -25,15 +25,13 @@ export class HeroesService {
   }
   
 
-
-/*   private loadHeroes(): void {
-    const storedHeroes = localStorage.getItem(this.localStorageKey)
-    if(storedHeroes == null){
-      this.setAllHeroes()
-    }else{
-      this.heroes = storedHeroes ? JSON.parse(storedHeroes) : []
-    }
-  } */
+  getHeroesByPage(page: number): Hero[] {
+    const pageSize = 12;  
+    const startIndex = (page - 1) * pageSize;  
+    const endIndex = startIndex + pageSize;  
+    return this.heroes.slice(startIndex, endIndex);
+  }
+  
 
   private setAllHeroes(){
     this.http.get<any>(this.heroesUrl).subscribe( (data) => {
