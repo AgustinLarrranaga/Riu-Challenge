@@ -1,0 +1,124 @@
+{
+  "heroes": [
+    {
+      "id": "1",
+      "name": "Superman",
+      "world": "Earth",
+      "image": "https://example.com/superman.jpg",
+      "enemy": "Lex Luthor",
+      "author": "Jerry Siegel, Joe Shuster"
+    },
+    {
+      "id": "2",
+      "name": "Spider-Man",
+      "world": "Earth",
+      "image": "https://example.com/spiderman.jpg",
+      "enemy": "Green Goblin",
+      "author": "Stan Lee, Steve Ditko"
+    },
+    {
+      "id": "3",
+      "name": "Wonder Woman",
+      "world": "Earth",
+      "image": "https://example.com/wonderwoman.jpg",
+      "enemy": "Ares",
+      "author": "William Moulton Marston"
+    },
+    {
+      "id": "4",
+      "name": "Black Panther",
+      "world": "Wakanda",
+      "image": "https://example.com/blackpanther.jpg",
+      "enemy": "Killmonger",
+      "author": "Stan Lee, Jack Kirby"
+    },
+    {
+      "id": "5",
+      "name": "Flash",
+      "world": "Earth",
+      "image": "https://example.com/flash.jpg",
+      "enemy": "Reverse-Flash",
+      "author": "Gardner Fox, Harry Lampert"
+    },
+    {
+      "id": "6",
+      "name": "Batman",
+      "world": "Earth",
+      "image": "https://example.com/batman.jpg",
+      "enemy": "Joker",
+      "author": "Bob Kane, Bill Finger"
+    },
+    {
+      "id": "7",
+      "name": "Iron Man",
+      "world": "Earth",
+      "image": "https://example.com/ironman.jpg",
+      "enemy": "Mandarin",
+      "author": "Stan Lee, Don Heck"
+    },
+    {
+      "id": "8",
+      "name": "Thor",
+      "world": "Asgard",
+      "image": "https://example.com/thor.jpg",
+      "enemy": "Loki",
+      "author": "Stan Lee, Jack Kirby"
+    },
+    {
+      "id": "9",
+      "name": "Green Lantern",
+      "world": "Earth",
+      "image": "https://example.com/greenlantern.jpg",
+      "enemy": "Sinestro",
+      "author": "John Broome, Gil Kane"
+    },
+    {
+      "id": "10",
+      "name": "Captain America",
+      "world": "Earth",
+      "image": "https://example.com/captainamerica.jpg",
+      "enemy": "Red Skull",
+      "author": "Joe Simon, Jack Kirby"
+    },
+    {
+      "id": "11",
+      "name": "Aquaman",
+      "world": "Atlantis",
+      "image": "https://example.com/aquaman.jpg",
+      "enemy": "Black Manta",
+      "author": "Paul Norris, Mort Weisinger"
+    },
+    {
+      "id": "12",
+      "name": "Doctor Strange",
+      "world": "Earth",
+      "image": "https://example.com/doctorstrange.jpg",
+      "enemy": "Dormammu",
+      "author": "Stan Lee, Steve Ditko"
+    },
+    {
+      "id": "13",
+      "name": "Hulk",
+      "world": "Earth",
+      "image": "https://example.com/hulk.jpg",
+      "enemy": "Abomination",
+      "author": "Stan Lee, Jack Kirby"
+    },
+    {
+      "id": "14",
+      "name": "Deadpool",
+      "world": "Earth",
+      "image": "https://example.com/deadpool.jpg",
+      "enemy": "Ajax",
+      "author": "Fabian Nicieza, Rob Liefeld"
+    },
+    {
+      "id": "15",
+      "name": "Wolverine",
+      "world": "Earth",
+      "image": "https://example.com/wolverine.jpg",
+      "enemy": "Sabretooth",
+      "author": "Roy Thomas, Len Wein"
+    }
+  ]
+}
