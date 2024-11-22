@@ -1,7 +1,5 @@
-// src/app/heroes.service.ts
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
-import { Observable } from 'rxjs'
 import { Hero } from '../models/hero.model'
 
 @Injectable({
@@ -17,15 +15,25 @@ export class HeroesService {
     this.loadHeroes()
   }
 
-
   private loadHeroes(): void {
+    const storedHeroes = localStorage.getItem(this.localStorageKey);
+    if (storedHeroes == null) {
+      this.setAllHeroes(); 
+    } else {
+      this.heroes = storedHeroes ? JSON.parse(storedHeroes) : [];
+    }
+  }
+  
+
+
+/*   private loadHeroes(): void {
     const storedHeroes = localStorage.getItem(this.localStorageKey)
     if(storedHeroes == null){
       this.setAllHeroes()
     }else{
       this.heroes = storedHeroes ? JSON.parse(storedHeroes) : []
     }
-  }
+  } */
 
   private setAllHeroes(){
     this.http.get<any>(this.heroesUrl).subscribe( (data) => {

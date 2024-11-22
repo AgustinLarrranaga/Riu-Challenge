@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HeroesService } from '../services/heroes.service';
+import { Hero } from '../models/hero.model';
 
 @Component({
   selector: 'app-heroes-list',
@@ -7,9 +9,14 @@ import { Component } from '@angular/core';
 })
 export class HeroesListComponent {
 
-  cards = [
-    { image: 'https://via.placeholder.com/300x200', text: 'Card 1' },
-    { image: 'https://via.placeholder.com/300x200', text: 'Card 2' },
-    { image: 'https://via.placeholder.com/300x200', text: 'Card 3' },
-  ];
+ heroes: Hero[] = []
+  constructor(private heroesService: HeroesService) { }
+
+  ngOnInit(): void {
+    this.loadCharacters()
+  }
+
+  loadCharacters(page: number = 1): void {
+    this.heroes = this.heroesService.getAllHeroes()
+  }
 }
