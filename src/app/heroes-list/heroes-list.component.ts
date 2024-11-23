@@ -9,7 +9,9 @@ import { Hero } from '../models/hero.model';
 })
 export class HeroesListComponent {
 
- heroes: Hero[] = []
+  heroes: Hero[] = []
+  paginatorDisable: boolean = false
+  
   constructor(private heroesService: HeroesService) { }
 
   ngOnInit(): void {
@@ -17,14 +19,23 @@ export class HeroesListComponent {
   }
 
   loadCharacters(page: number = 1): void {
-    this.heroes =  this.heroesService.getHeroesByPage(page)
+    this.heroes = this.heroesService.getHeroesByPage(page)
     console.log(this.heroes)
   }
 
   onPageChanged(page: number) {
-    this.heroes =  this.heroesService.getHeroesByPage(page)
+    this.heroes = this.heroesService.getHeroesByPage(page)
     console.log(this.heroes)
   }
 
-  
+  onSearch(searchValue: string) {
+    if (searchValue) {
+      this.heroes = this.heroesService.searchHeroesByName(searchValue)
+      this.paginatorDisable = true
+    } else {
+      window.location.reload()
+    }
+  }
+
+
 }

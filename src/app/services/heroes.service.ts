@@ -25,6 +25,12 @@ export class HeroesService {
   }
   
 
+  getTotalPages(): number {
+    const heroesPerPage = 12; 
+    const totalHeroes = this.heroes.length; 
+    return Math.ceil(totalHeroes / heroesPerPage);
+}
+
   getHeroesByPage(page: number): Hero[] {
     const pageSize = 12;  
     const startIndex = (page - 1) * pageSize;  

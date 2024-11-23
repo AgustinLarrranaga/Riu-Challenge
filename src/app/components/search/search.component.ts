@@ -9,11 +9,9 @@ import { HeroesService } from 'src/app/services/heroes.service';
 })
 export class SearchComponent {
 
-  characterSearched?: []
   searchForm: FormGroup
-  @Output() emitCharacterSearched = new EventEmitter<any>()
-  infoMessage?: string
-  @Output() emitInfoMessage = new EventEmitter<any>()
+  @Output() search = new EventEmitter<any>()
+
 
   
   constructor (
@@ -25,16 +23,8 @@ export class SearchComponent {
     })
   }
 
-  searchCharactersByName() {
+  searchHeroesByName() {
      const searchValue = this.searchForm.get('searcher')?.value 
-     console.log(searchValue);
-
-    if (searchValue) {
-      console.log(searchValue);
-      this.heroesService.searchHeroesByName(searchValue)
-      
-    } else {
-      window.location.reload()
-    } 
+     this.search.emit(searchValue);
   } 
 }
