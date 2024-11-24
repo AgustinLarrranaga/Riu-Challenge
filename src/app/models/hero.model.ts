@@ -1,8 +1,9 @@
 export interface Hero {
-  id: string;
+  id: number;
   name: string;
   world: string;
   image: string;
   enemy: string;
   author: string;
 }
+

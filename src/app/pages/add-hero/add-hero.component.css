@@ -1,0 +1,22 @@
+h1 {
+    text-transform: uppercase;
+    color: #007bff;
+  }
+  
+  form {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .text-danger {
+    font-size: 0.875rem;
+  }
+  
+  .input-title{
+    color: aliceblue;
+  }

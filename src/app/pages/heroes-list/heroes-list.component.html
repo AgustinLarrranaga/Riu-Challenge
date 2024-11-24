@@ -5,18 +5,40 @@
 
 
 <div class="container-fluid bg-dark text-light py-4 p-5">
-    <div class="row g-4">
-      <!-- Repite las tarjetas hasta llenar las 12 posiciones -->
-      <div class="col-6 col-md-3 " *ngFor="let hero of heroes.slice(0, 12)">
-        <div class="card bg-secondary custom-card">
-          <img [src]="hero.image" class="card-img-top custom-img">
-          <div class="card-body">
-            <p class="card-text text-light">{{ hero.name }}</p>
+  <div class="row g-4">
+    <div class="col-6 col-md-3" *ngFor="let hero of heroes.slice(0, 12); let i = index">
+      <div class="card bg-secondary custom-card text-center">
+        <img [src]="hero.image" class="card-img-top custom-img" alt="{{ hero.name }}" />
+
+        <div class="card-body d-flex flex-column justify-content-between">
+          <p class="card-text text-light mb-3">{{ hero.name }}</p>
+
+          <div class="d-flex justify-content-center gap-2">
+            <button
+              type="button"
+              class="btn btn-sm btn-primary"
+              (click)="onEditHero(hero)"
+              title="Editar héroe"
+            >
+              <i class="bi bi-pencil"></i>
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-sm btn-danger"
+              (click)="onDeleteHero(hero.id)"
+              title="Eliminar héroe"
+            >
+              <i class="bi bi-trash"></i>
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+
   
   <app-paginator [disable]="paginatorDisable" (pageChanged)="onPageChanged($event)"></app-paginator>
 
