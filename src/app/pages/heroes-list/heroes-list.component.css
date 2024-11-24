@@ -40,3 +40,17 @@ body {
     align-items: center;
   }
   
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between; 
+   align-items: flex-end;
+  }
+  
+  .flex-container > * {
+    flex: 0 0 50%;
+    text-align: end; 
+    margin: auto;
+  }
+  
+  

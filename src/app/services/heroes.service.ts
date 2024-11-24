@@ -25,6 +25,18 @@ export class HeroesService {
   }
   
 
+  private setAllHeroes(){
+    this.http.get<any>(this.heroesUrl).subscribe( (data) => {
+        this.heroes = data.heroes 
+        localStorage.setItem(this.localStorageKey, JSON.stringify(this.heroes)) 
+      })
+    }
+
+  private saveHeroes(): void {
+    localStorage.setItem(this.localStorageKey, JSON.stringify(this.heroes))
+  }
+
+  
   getTotalPages(): number {
     const heroesPerPage = 12; 
     const totalHeroes = this.heroes.length; 
@@ -38,18 +50,7 @@ export class HeroesService {
     return this.heroes.slice(startIndex, endIndex);
   }
   
-
-  private setAllHeroes(){
-    this.http.get<any>(this.heroesUrl).subscribe( (data) => {
-        this.heroes = data.heroes 
-        localStorage.setItem(this.localStorageKey, JSON.stringify(this.heroes)) 
-      })
-    }
-
-  private saveHeroes(): void {
-    localStorage.setItem(this.localStorageKey, JSON.stringify(this.heroes))
-  }
-
+  
   getAllHeroes(): Hero[] {
     return this.heroes
   }
