@@ -14,10 +14,11 @@ import { Router } from '@angular/router';
 })
 export class AddHeroComponent {
   heroForm: FormGroup;
+  
 
   constructor(private fb: FormBuilder , private heroesService: HeroesService, private route: Router ) {
     this.heroForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(3)]],
+      name: ['Batman', [Validators.required, Validators.minLength(3)]],
       world: ['', [Validators.required]],
       enemy: ['', [Validators.required]],
       image: ['', [Validators.required, this.imageUrlValidator]],

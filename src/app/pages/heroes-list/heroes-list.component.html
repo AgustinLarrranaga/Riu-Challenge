@@ -8,7 +8,7 @@
   <div class="row g-4">
     <div class="col-6 col-md-3" *ngFor="let hero of heroes.slice(0, 12); let i = index">
       <div class="card bg-secondary custom-card text-center">
-        <img [src]="hero.image" class="card-img-top custom-img" alt="{{ hero.name }}" />
+        <img [src]="hero.image" class="card-img-top custom-img" />
 
         <div class="card-body d-flex flex-column justify-content-between">
           <p class="card-text text-light mb-3">{{ hero.name }}</p>

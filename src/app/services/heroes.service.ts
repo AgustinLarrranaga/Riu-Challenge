@@ -36,14 +36,19 @@ export class HeroesService {
     localStorage.setItem(this.localStorageKey, JSON.stringify(this.heroes))
   }
 
-  private getLastId() {
-    return this.heroes.length
+  private getNewId(): number {
+    if (this.heroes.length === 0) {
+      return 1; 
+    }
+    const maxId = Math.max(...this.heroes.map(hero => hero.id));
+    return maxId + 1;
   }
+  
 
   getTotalPages(): number {
     const heroesPerPage = 12;
     const totalHeroes = this.heroes.length;
-    
+
     return Math.ceil(totalHeroes / heroesPerPage);
   }
 
@@ -64,7 +69,7 @@ export class HeroesService {
   }
 
   addHero(hero: Hero): void {
-    hero.id = this.getLastId() + 1
+    hero.id = this.getNewId() + 1
     this.heroes.push(hero)
     this.saveHeroes()
   }
