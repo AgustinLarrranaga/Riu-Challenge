@@ -38,12 +38,12 @@ export class HeroesService {
 
   private getNewId(): number {
     if (this.heroes.length === 0) {
-      return 1; 
+      return 1;
     }
     const maxId = Math.max(...this.heroes.map(hero => hero.id));
     return maxId + 1;
   }
-  
+
 
   getTotalPages(): number {
     const heroesPerPage = 12;
@@ -64,28 +64,36 @@ export class HeroesService {
     return this.heroes
   }
 
-  getHeroById(id: number): Hero | undefined {
-    return this.heroes.find(hero => hero.id === id)
+  getHeroById(id: number): Hero | null {
+    const hero = this.heroes.find(hero => hero.id == id)
+    if (!hero) {
+      return null
+    }
+    return hero
   }
 
   addHero(hero: Hero): void {
-    hero.id = this.getNewId() + 1
+    hero.id = this.getNewId()
     this.heroes.push(hero)
     this.saveHeroes()
   }
 
-  updateHero(id: number, updatedHero: Hero): void {
-    const index = this.heroes.findIndex(hero => hero.id === id)
-    if (index !== -1) {
-      this.heroes[index] = { ...this.heroes[index], ...updatedHero }
+  updateHero(updatedHero: Hero): void {
+    const hero = this.heroes.find(h => h.id == updatedHero.id);    
+    if (hero) {
+      hero.name = updatedHero.name;
+      hero.world = updatedHero.world;
+      hero.image = updatedHero.image;
+      hero.enemy = updatedHero.enemy;
+      hero.author = updatedHero.author;
+      this.saveHeroes(); 
+    } else {
+      console.warn(`Heroe con id ${updatedHero.id} no encontrado.`);
     }
-    this.saveHeroes()
-
   }
 
-  deleteHero(id: number): Hero[] {
-    console.log('borrandio');
 
+  deleteHero(id: number): Hero[] {
     this.heroes = this.heroes.filter(hero => hero.id !== id)
     this.saveHeroes()
     return this.heroes

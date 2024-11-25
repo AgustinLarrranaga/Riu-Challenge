@@ -5,6 +5,7 @@ import { HeroesListComponent } from './pages/heroes-list/heroes-list.component';
 const routes: Routes = [
   { path: '', component: HeroesListComponent },
   { path: 'add', loadComponent: () => import('./pages/add-hero/add-hero.component').then(m => m.AddHeroComponent) }, 
+  { path: 'edit/:id', loadComponent: () => import('./pages/edit-hero/edit-hero.component').then(m => m.EditHeroComponent) }, 
 ];
 
 

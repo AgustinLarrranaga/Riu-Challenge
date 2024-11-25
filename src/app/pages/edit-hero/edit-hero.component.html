@@ -1,0 +1,5 @@
+<div class="container mt-5">
+    <h1 class="text-center mb-4">{{title}}</h1>
+   <app-hero-form *ngIf="!formDisable" [hero]="hero" (saveHero)="onSave($event)"></app-hero-form>
+  </div>
+  

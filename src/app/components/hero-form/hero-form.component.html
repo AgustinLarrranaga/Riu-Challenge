@@ -1,0 +1,51 @@
+<form [formGroup]="heroForm" (ngSubmit)="onSubmit()" class="g-3">
+      
+    <div class="mb-3">
+      <label for="name" class="form-label">Nombre del Héroe</label>
+      <input type="text" id="name" class="form-control" formControlName="name" placeholder="Ej. Batman" />
+      <div *ngIf="getErrorMessage('name')" class="text-danger small mt-1">
+        {{ getErrorMessage('name') }}
+      </div>
+    </div>
+
+    
+    <div class="mb-3">
+      <label for="world" class="form-label">Mundo o Ciudad</label>
+      <input type="text" id="world" class="form-control" formControlName="world" placeholder="Ej. Gotham" />
+      <div *ngIf="getErrorMessage('world')" class="text-danger small mt-1">
+        {{ getErrorMessage('world') }}
+      </div>
+    </div>
+
+    
+    <div class="mb-3">
+      <label for="enemy" class="form-label">Enemigo</label>
+      <input type="text" id="enemy" class="form-control" formControlName="enemy" placeholder="Ej. Joker" />
+      <div *ngIf="getErrorMessage('enemy')" class="text-danger small mt-1">
+        {{ getErrorMessage('enemy') }}
+      </div>
+    </div>
+
+    
+    <div class="mb-3">
+      <label for="image" class="form-label">URL de la Imagen</label>
+      <input type="url" id="image" class="form-control" formControlName="image" placeholder="Ej. https://imagen.com/batman.jpg" />
+      <div *ngIf="getErrorMessage('image')" class="text-danger small mt-1">
+        {{ getErrorMessage('image') }}
+      </div>
+    </div>
+
+    
+    <div class="mb-3">
+      <label for="author" class="form-label">Autor</label>
+      <input type="text" id="author" class="form-control" formControlName="author" placeholder="Ej. Alfred" />
+      <div *ngIf="getErrorMessage('author')" class="text-danger small mt-1">
+        {{ getErrorMessage('author') }}
+      </div>
+    </div>
+
+    
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-primary btn-lg" [disabled]="heroForm.invalid">Guardar Héroe</button>
+    </div>
+  </form>

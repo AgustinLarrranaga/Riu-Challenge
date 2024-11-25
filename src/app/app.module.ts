@@ -7,7 +7,7 @@ import { HeroesListComponent } from './pages/heroes-list/heroes-list.component';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { SearchComponent } from './components/search/search.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AddHeroButtonComponent } from './components/addHeroButton/add-hero-button.component';
+import { AddHeroButtonComponent } from './components/add-hero-button/add-hero-button.component';
 
 
 @NgModule({

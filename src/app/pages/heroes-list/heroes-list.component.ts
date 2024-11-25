@@ -39,10 +39,8 @@ export class HeroesListComponent {
 
   onDeleteHero(id: number) {
     const confirmDelete = window.confirm('¿Estás seguro de que quieres eliminar a este héroe?');
-
     if (confirmDelete) {
       this.heroes = this.heroesService.deleteHero(id)
-      //
     }
   }
 
