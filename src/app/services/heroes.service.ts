@@ -15,18 +15,18 @@ export class HeroesService {
     this.loadHeroes()
   }
 
-  private saveHeroes(): void {
+  saveHeroes(): void {
     localStorage.setItem(this.localStorageKey, JSON.stringify(this.heroes))
   }
 
-  private getNewId(): number {
+  getNewId(): number {
     if (this.heroes.length === 0) {
       return 1;
     }
     const maxId = Math.max(...this.heroes.map(hero => hero.id));
     return maxId + 1;
   }
-  
+
    async loadHeroes(): Promise<void> {
       const storedHeroes = localStorage.getItem(this.localStorageKey);  
       if (storedHeroes == null) {
@@ -36,7 +36,7 @@ export class HeroesService {
       }
     }
 
-    private setAllHeroes(): Promise<void> {
+    setAllHeroes(): Promise<void> {
       return new Promise((resolve, reject) => {
         this.http.get<any>(this.heroesUrl).subscribe({
           next: (data) => {
@@ -57,7 +57,6 @@ export class HeroesService {
   getTotalPages(): number {
     const heroesPerPage = 12;
     const totalHeroes = this.heroes.length;
-
     return Math.ceil(totalHeroes / heroesPerPage);
   }
 
@@ -88,7 +87,7 @@ export class HeroesService {
   }
 
   updateHero(updatedHero: Hero): void {
-    const hero = this.heroes.find(h => h.id == updatedHero.id);    
+    let hero = this.heroes.find(h => h.id == updatedHero.id);    
     if (hero) {
       hero.name = updatedHero.name;
       hero.world = updatedHero.world;
@@ -97,7 +96,7 @@ export class HeroesService {
       hero.author = updatedHero.author;
       this.saveHeroes(); 
     } else {
-      console.warn(`Heroe con id ${updatedHero.id} no encontrado.`);
+      console.error(`Heroe con id ${updatedHero.id} no encontrado.`);
     }
   }
 
