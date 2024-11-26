@@ -2,11 +2,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { Hero } from 'src/app/models/hero.model';
+import { UppercaseDirective } from 'src/app/directives/uppercase.directive';
 
 @Component({
   selector: 'app-hero-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule,UppercaseDirective],
   templateUrl: './hero-form.component.html',
 })
 export class HeroFormComponent {
@@ -32,13 +33,14 @@ export class HeroFormComponent {
   }
 
   private imageUrlValidator(control: AbstractControl): ValidationErrors | null {
-    const urlPattern = /^https?:\/\/.*\.jpg$/;
+    const urlPattern = /^https?:\/\//; 
     const value = control.value;
     if (!value || urlPattern.test(value)) {
       return null;
     }
     return { invalidImageUrl: true };
   }
+  
 
   getErrorMessage(field: string): string | null {
     const control = this.heroForm.get(field);
@@ -53,7 +55,7 @@ export class HeroFormComponent {
       return `El campo debe tener al menos ${minLength} caracteres.`;
     }
     if (control.hasError('invalidImageUrl')) {
-      return 'La URL debe comenzar con "https://" o "http://" y terminar con ".jpg".';
+      return 'La URL debe comenzar con "https://" o "http://"';
     }
     return null;
   }

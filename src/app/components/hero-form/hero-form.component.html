@@ -1,12 +1,20 @@
 <form [formGroup]="heroForm" (ngSubmit)="onSubmit()" class="g-3">
       
     <div class="mb-3">
-      <label for="name" class="form-label">Nombre del Héroe</label>
-      <input type="text" id="name" class="form-control" formControlName="name" placeholder="Ej. Batman" />
-      <div *ngIf="getErrorMessage('name')" class="text-danger small mt-1">
-        {{ getErrorMessage('name') }}
+        <label for="name" class="form-label">Nombre del Héroe</label>
+        <input 
+          type="text" 
+          id="name" 
+          class="form-control" 
+          formControlName="name" 
+          placeholder="Ej. Batman" 
+          appUppercase 
+        />
+        <div *ngIf="getErrorMessage('name')" class="text-danger small mt-1">
+          {{ getErrorMessage('name') }}
+        </div>
       </div>
-    </div>
+      
 
     
     <div class="mb-3">
