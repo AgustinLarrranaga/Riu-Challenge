@@ -1,44 +1,38 @@
-<div class="flex-container">
-  <app-search (search)="onSearch($event)"></app-search>
-  <app-add-hero-button></app-add-hero-button>
+<div *ngIf="loading" class="loader">
+  <mat-spinner></mat-spinner>
 </div>
 
+<div *ngIf="!loading">
+  <div class="flex-container">
+    <app-search (search)="onSearch($event)"></app-search>
+    <app-add-hero-button></app-add-hero-button>
+  </div>
 
-<div class="container-fluid bg-dark text-light py-4 p-5">
-  <div class="row g-4">
-    <div class="col-6 col-md-3" *ngFor="let hero of heroes.slice(0, 12); let i = index">
-      <div class="card bg-secondary custom-card text-center">
-        <img [src]="hero.image" class="card-img-top custom-img" />
 
-        <div class="card-body d-flex flex-column justify-content-between">
-          <p class="card-text text-light mb-3">{{ hero.name }}</p>
-
-          <div class="d-flex justify-content-center gap-2">
-            <button
-              type="button"
-              class="btn btn-sm btn-primary"
-              routerLink="/edit/{{hero.id}}"
-              title="Editar héroe"
-            >
-              <i class="bi bi-pencil"></i>
-            </button>
-
-            <button
-              type="button"
-              class="btn btn-sm btn-danger"
-              (click)="onDeleteHero(hero.id)"
-              title="Eliminar héroe"
-            >
-              <i class="bi bi-trash"></i>
-            </button>
+  <div class="container-fluid bg-dark text-light py-4 p-5">
+    <div class="row g-4">
+      <div class="col-6 col-md-3" *ngFor="let hero of heroes.slice(0, 12); let i = index">
+        <div class="card bg-secondary custom-card text-center ">
+          <img [src]="hero.image" class="card-img-top custom-img" />
+  
+          <div class="card-body d-flex flex-column justify-content-between">
+            <p class="card-text text-light mb-3">{{ hero.name }}</p>
+  
+            <div class="d-flex justify-content-center gap-2">
+              <button type="button" class="btn btn-sm btn-primary" routerLink="/edit/{{hero.id}}" title="Editar héroe">
+                <i class="bi bi-pencil"></i>
+              </button>
+  
+              <button type="button" class="btn btn-sm btn-danger" (click)="onDeleteHero(hero.id)" title="Eliminar héroe">
+                <i class="bi bi-trash"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-
   
   <app-paginator [disable]="paginatorDisable" (pageChanged)="onPageChanged($event)"></app-paginator>
 
+</div>

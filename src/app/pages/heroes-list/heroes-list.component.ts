@@ -11,16 +11,15 @@ export class HeroesListComponent {
 
   heroes: Hero[] = []
   paginatorDisable: boolean = false
+  loading : boolean = true
 
   constructor(private heroesService: HeroesService) { }
 
   ngOnInit(): void {
-    this.loadCharacters()
-  }
-
-  loadCharacters(page: number = 1): void {
-    this.heroes = this.heroesService.getHeroesByPage(page)
-    console.log(this.heroes)
+    this.heroesService.loadHeroes().then(() => {
+      this.heroes = this.heroesService.getHeroesByPage(1);
+      this.loading = false
+    });
   }
 
   onPageChanged(page: number) {
@@ -43,9 +42,4 @@ export class HeroesListComponent {
       this.heroes = this.heroesService.deleteHero(id)
     }
   }
-
-  onEditHero(hero: Hero) {
-
-  }
-
 }
