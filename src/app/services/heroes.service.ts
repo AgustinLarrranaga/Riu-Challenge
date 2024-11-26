@@ -15,23 +15,6 @@ export class HeroesService {
     this.loadHeroes()
   }
 
-  private loadHeroes(): void {
-    const storedHeroes = localStorage.getItem(this.localStorageKey);
-    if (storedHeroes == null) {
-      this.setAllHeroes();
-    } else {
-      this.heroes = storedHeroes ? JSON.parse(storedHeroes) : [];
-    }
-  }
-
-
-  private setAllHeroes() {
-    this.http.get<any>(this.heroesUrl).subscribe((data) => {
-      this.heroes = data.heroes
-      localStorage.setItem(this.localStorageKey, JSON.stringify(this.heroes))
-    })
-  }
-
   private saveHeroes(): void {
     localStorage.setItem(this.localStorageKey, JSON.stringify(this.heroes))
   }
@@ -43,6 +26,32 @@ export class HeroesService {
     const maxId = Math.max(...this.heroes.map(hero => hero.id));
     return maxId + 1;
   }
+  
+   async loadHeroes(): Promise<void> {
+      const storedHeroes = localStorage.getItem(this.localStorageKey);  
+      if (storedHeroes == null) {
+        await this.setAllHeroes();
+      } else {
+        this.heroes = JSON.parse(storedHeroes);
+      }
+    }
+
+    private setAllHeroes(): Promise<void> {
+      return new Promise((resolve, reject) => {
+        this.http.get<any>(this.heroesUrl).subscribe({
+          next: (data) => {
+            this.heroes = data.heroes;
+            localStorage.setItem(this.localStorageKey, JSON.stringify(this.heroes));
+            resolve();
+          },
+          error: (error) => {
+            console.error('Error loading heroes:', error);
+            reject(error);
+          },
+        });
+      });
+    }
+
 
 
   getTotalPages(): number {

@@ -28,7 +28,7 @@
       "id": "4",
       "name": "Black Panther",
       "world": "Wakanda",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1hPETpzBcjtOLQjezuJjUVx4J8dCH0WixA&s",
+      "image": "https://imagenes.20minutos.es/files/image_990_556/uploads/imagenes/2022/09/26/chadwick-boseman.jpeg",
       "enemy": "Killmonger",
       "author": "Stan Lee, Jack Kirby"
     },
@@ -36,7 +36,7 @@
       "id": "5",
       "name": "Flash",
       "world": "Earth",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1hPETpzBcjtOLQjezuJjUVx4J8dCH0WixA&s",
+      "image": "https://wallpapers.com/images/featured/el-flash-hbi9deutvaidc6oc.jpg",
       "enemy": "Reverse-Flash",
       "author": "Gardner Fox, Harry Lampert"
     },
@@ -44,7 +44,7 @@
       "id": "6",
       "name": "Batman",
       "world": "Earth",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1hPETpzBcjtOLQjezuJjUVx4J8dCH0WixA&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8txRNRKrPXcpRe33xAq9-kRROgXlgt8rIcg&s",
       "enemy": "Joker",
       "author": "Bob Kane, Bill Finger"
     },
@@ -52,7 +52,7 @@
       "id": "7",
       "name": "Iron Man",
       "world": "Earth",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1hPETpzBcjtOLQjezuJjUVx4J8dCH0WixA&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZOTFISA6VnLis4qhfZ8YSttyv9p2gFqwCUA&s",
       "enemy": "Mandarin",
       "author": "Stan Lee, Don Heck"
     },
@@ -60,7 +60,7 @@
       "id": "8",
       "name": "Thor",
       "world": "Asgard",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1hPETpzBcjtOLQjezuJjUVx4J8dCH0WixA&s",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Chris_Hemsworth_as_Thor.jpg/220px-Chris_Hemsworth_as_Thor.jpg",
       "enemy": "Loki",
       "author": "Stan Lee, Jack Kirby"
     },
@@ -68,7 +68,7 @@
       "id": "9",
       "name": "Green Lantern",
       "world": "Earth",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1hPETpzBcjtOLQjezuJjUVx4J8dCH0WixA&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3oLhDHGoHcw10YmJVg-6KGlFH2v1h1gHUAA&s",
       "enemy": "Sinestro",
       "author": "John Broome, Gil Kane"
     },
@@ -76,7 +76,7 @@
       "id": "10",
       "name": "Captain America",
       "world": "Earth",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1hPETpzBcjtOLQjezuJjUVx4J8dCH0WixA&s",
+      "image": "https://i.pinimg.com/736x/e5/f9/70/e5f97050dc2ad9becac0b94aa1674d1e.jpg",
       "enemy": "Red Skull",
       "author": "Joe Simon, Jack Kirby"
     },
@@ -84,7 +84,7 @@
       "id": "11",
       "name": "Aquaman",
       "world": "Atlantis",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1hPETpzBcjtOLQjezuJjUVx4J8dCH0WixA&s",
+      "image": "https://i.blogs.es/12a5f3/aquaman-image2/840_560.jpg",
       "enemy": "Black Manta",
       "author": "Paul Norris, Mort Weisinger"
     },
@@ -92,7 +92,7 @@
       "id": "12",
       "name": "Doctor Strange",
       "world": "Earth",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1hPETpzBcjtOLQjezuJjUVx4J8dCH0WixA&s",
+      "image": "https://i.pinimg.com/736x/e9/40/a8/e940a83049b4ea8c10434a9a35178f0b.jpg",
       "enemy": "Dormammu",
       "author": "Stan Lee, Steve Ditko"
     },
@@ -100,7 +100,7 @@
       "id": "13",
       "name": "Hulk",
       "world": "Earth",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1hPETpzBcjtOLQjezuJjUVx4J8dCH0WixA&s",
+      "image": "https://cdn.pixabay.com/photo/2023/06/28/20/04/ai-generated-8095123_1280.png",
       "enemy": "Abomination",
       "author": "Stan Lee, Jack Kirby"
     },
@@ -108,7 +108,7 @@
       "id": "14",
       "name": "Deadpool",
       "world": "Earth",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1hPETpzBcjtOLQjezuJjUVx4J8dCH0WixA&s",
+      "image": "https://pngimg.com/uploads/deadpool/small/deadpool_PNG83.png",
       "enemy": "Ajax",
       "author": "Fabian Nicieza, Rob Liefeld"
     },
@@ -116,9 +116,49 @@
       "id": "15",
       "name": "Wolverine",
       "world": "Earth",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu1hPETpzBcjtOLQjezuJjUVx4J8dCH0WixA&s",
+      "image": "https://i.pinimg.com/736x/3b/95/75/3b957518ca1dd5e02a953a1f462dcc1a.jpg",
       "enemy": "Sabretooth",
       "author": "Roy Thomas, Len Wein"
+    },
+    {
+      "id": "16",
+      "name": "Shazam",
+      "world": "Earth",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrfcpCY2U39ewqr3C3ARNMekjEiF7Iq7HE0g&s",
+      "enemy": "Black Adam",
+      "author": "C. C. Beck, Bill Parker"
+    },
+    {
+      "id": "17",
+      "name": "Ant-Man",
+      "world": "Earth",
+      "image": "https://imgcdn.stablediffusionweb.com/2024/4/27/8f226aa8-01fe-4fe0-be6a-ba67349d3937.jpg",
+      "enemy": "Yellowjacket",
+      "author": "Stan Lee, Larry Lieber"
+    },
+    {
+      "id": "18",
+      "name": "Arrow",
+      "world": "Earth",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlro89e9WI5ZVCJDeRhPGoB_PHvnfoQV-58A&s",
+      "enemy": "Criminals",
+      "author": "Netflix"
+    },
+    {
+      "id": "19",
+      "name": "Hombre radioactivo",
+      "world": "Springfield",
+      "image": "https://i.pinimg.com/474x/d5/fa/73/d5fa735b029f540dc8c22d5932fafd9c.jpg",
+      "enemy": "Bob patino",
+      "author": "Mat Groennign"
+    },
+    {
+      "id": "20",
+      "name": "Messi",
+      "world": "Earth",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGv0ZIrLidHrXmxdSY38qwW3_FyQZhJo-sFQ&s",
+      "enemy": "Cr7",
+      "author": "Dios"
     }
   ]
 }
