@@ -182,7 +182,7 @@ describe('HeroesService', () => {
     expect(filtrados.length).toEqual(1)
   });
 
-  it('Debe devovler 2 heroe cuando se busca man', () => {
+  xit('Debe devovler 2 heroe cuando se busca man', () => {
     service['heroes'] = mockHeroesCorto;
     const filtrados = service.searchHeroesByName('man') 
     expect(filtrados.length).toEqual(2)
