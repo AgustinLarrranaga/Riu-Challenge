@@ -8,6 +8,8 @@ import { PaginatorComponent } from './components/paginator/paginator.component';
 import { SearchComponent } from './components/search/search.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddHeroButtonComponent } from './components/add-hero-button/add-hero-button.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { AddHeroButtonComponent } from './components/add-hero-button/add-hero-bu
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,  
-    ReactiveFormsModule,
+    ReactiveFormsModule, 
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
