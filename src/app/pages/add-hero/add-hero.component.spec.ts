@@ -3,8 +3,8 @@ import { AddHeroComponent } from './add-hero.component';
 import { HeroesService } from 'src/app/services/heroes.service';
 import { Router } from '@angular/router';
 import { Hero } from 'src/app/models/hero.model';
-import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HeroFormComponent } from 'src/app/components/hero-form/hero-form.component';
 
 describe('AddHeroComponent', () => {
@@ -18,8 +18,7 @@ describe('AddHeroComponent', () => {
     const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
 
     await TestBed.configureTestingModule({
-      declarations: [AddHeroComponent, HeroFormComponent],
-      imports: [ReactiveFormsModule, RouterTestingModule],
+      imports: [AddHeroComponent, HeroFormComponent, ReactiveFormsModule, RouterTestingModule],
       providers: [
         { provide: HeroesService, useValue: heroesServiceSpy },
         { provide: Router, useValue: routerSpy }
@@ -33,8 +32,8 @@ describe('AddHeroComponent', () => {
   });
 
   it('debería agregar un héroe y redirigir a la página principal al guardar', () => {
-    const newHero: Hero =  { id: 2, name: 'Batman', world: 'Earth', image: '', enemy: 'Joker', author: 'Bob Kane' }
-    spyOn(window, 'alert');  
+    const newHero: Hero = { id: 2, name: 'Batman', world: 'Earth', image: '', enemy: 'Joker', author: 'Bob Kane' };
+    spyOn(window, 'alert');
 
     component.onSave(newHero);
 
