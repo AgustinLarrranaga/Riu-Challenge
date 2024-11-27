@@ -10,10 +10,8 @@
 - [Tecnologías](#tecnologías)
 - [Requisitos previos](#requisitos-previos)
 - [Instalación](#instalación)
-- [Uso](#uso)
-- [Estructura del proyecto](#estructura-del-proyecto)
+- [Autores](#autores))
 - [Pruebas](#pruebas)
-- [Autores](#autores)
 
 ---
 
