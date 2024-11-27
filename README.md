@@ -57,6 +57,9 @@ Antes de comenzar, asegúrate de tener instalado:
    cd heroes-app
 
 
+## **Autores**
+
+Agustin Larrañaga
 
 ## **Pruebas**
 
@@ -68,7 +71,3 @@ Ejecuta las pruebas:
    ```bash
    ng test
 
-
-## **Autores**
-
-Agustin Larrañaga
