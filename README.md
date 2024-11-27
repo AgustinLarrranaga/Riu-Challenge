@@ -74,5 +74,5 @@ Usamos Jasmine y Karma para probar los componentes y servicios.
 Ejecuta las pruebas:
 
    ```bash
-   ng test
+   ng test --code-coverage
 
