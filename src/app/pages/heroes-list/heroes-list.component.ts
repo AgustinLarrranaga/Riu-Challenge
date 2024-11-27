@@ -24,7 +24,6 @@ export class HeroesListComponent {
 
   onPageChanged(page: number) {
     this.heroes = this.heroesService.getHeroesByPage(page)
-    console.log(this.heroes)
   }
 
   onSearch(searchValue: string) {
@@ -32,7 +31,7 @@ export class HeroesListComponent {
       this.heroes = this.heroesService.searchHeroesByName(searchValue)
       this.paginatorDisable = true
     } else {
-      window.location.reload()
+      this.heroes = this.heroesService.getHeroesByPage(1);
     }
   }
 
