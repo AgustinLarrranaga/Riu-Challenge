@@ -81,6 +81,7 @@ describe('HeroesListComponent', () => {
 
     expect(heroesService.getHeroesByPage).toHaveBeenCalledWith(1);
     expect(component.heroes.length).toBeGreaterThan(0);
+    expect(component.paginatorDisable).toBeFalse();
   });
 
 

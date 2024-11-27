@@ -32,6 +32,7 @@ export class HeroesListComponent {
       this.paginatorDisable = true
     } else {
       this.heroes = this.heroesService.getHeroesByPage(1);
+      this.paginatorDisable = false
     }
   }
 
