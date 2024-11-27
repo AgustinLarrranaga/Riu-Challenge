@@ -17,15 +17,11 @@ export class AddHeroComponent {
 
   constructor(private heroesService: HeroesService, private route: Router ) {}
 
-
-
- 
   onSave(newHero: Hero): void {
     this.heroesService.addHero(newHero)
     alert('¡Héroe agregado exitosamente!');
     this.route.navigateByUrl("")
   }
-  
 
 }
 
