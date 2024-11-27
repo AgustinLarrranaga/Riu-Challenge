@@ -55,7 +55,7 @@ Antes de comenzar, asegúrate de tener instalado:
    cd heroes-app
 
 
-## **Autores**
+## **Autor**
 
 Agustin Larrañaga
 
