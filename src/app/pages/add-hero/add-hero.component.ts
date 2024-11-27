@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 import { HeroesService } from 'src/app/services/heroes.service';
 import { Hero } from 'src/app/models/hero.model';
 import { Router } from '@angular/router';

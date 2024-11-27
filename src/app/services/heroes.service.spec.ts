@@ -44,8 +44,6 @@ describe('HeroesService', () => {
     });
     service = TestBed.inject(HeroesService);
     httpTestingController = TestBed.inject(HttpTestingController);
-    //spyOn(service, 'loadHeroes').and.returnValue(Promise.resolve());
-
   });
 
 

@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { HeroesService } from 'src/app/services/heroes.service';
 
 @Component({
   selector: 'app-search',

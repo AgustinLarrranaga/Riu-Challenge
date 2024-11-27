@@ -19,11 +19,11 @@
             <p class="card-text text-light mb-3">{{ hero.name }}</p>
   
             <div class="d-flex justify-content-center gap-2">
-              <button type="button" class="btn btn-sm btn-primary" routerLink="/edit/{{hero.id}}" title="Editar héroe">
+              <button type="button" class="btn btn-sm btn-primary" routerLink="/edit/{{hero.id}}" >
                 <i class="bi bi-pencil"></i>
               </button>
   
-              <button type="button" class="btn btn-sm btn-danger" (click)="onDeleteHero(hero.id)" title="Eliminar héroe">
+              <button type="button" class="btn btn-sm btn-danger" (click)="onDeleteHero(hero.id)" >
                 <i class="bi bi-trash"></i>
               </button>
             </div>
