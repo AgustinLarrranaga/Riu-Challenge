@@ -68,10 +68,8 @@ Agustin Larrañaga
 
 ## **Pruebas**
 
-Ejecutar pruebas unitarias
+Ejecutar pruebas unitarias. 
 Usamos Jasmine y Karma para probar los componentes y servicios.
-
-Ejecuta las pruebas:
 
    ```bash
    ng test --code-coverage
