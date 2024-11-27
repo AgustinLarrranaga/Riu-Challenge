@@ -19,7 +19,8 @@ describe('HeroesListComponent', () => {
       'loadHeroes', 
       'getHeroesByPage',
       'searchHeroesByName',
-      'deleteHero'
+      'deleteHero',
+      'getTotalPages'
     ]);
 
     await TestBed.configureTestingModule({
@@ -90,14 +91,15 @@ describe('HeroesListComponent', () => {
     heroesService.deleteHero.and.returnValue([
         { id: 2, name: 'Batman', world: 'Earth', image: '', enemy: 'Joker', author: 'Bob Kane' },
     ]);
-
     spyOn(window, 'confirm').and.returnValue(true);
 
     component.onDeleteHero(id);
 
     expect(window.confirm).toHaveBeenCalledWith('¿Estás seguro de que quieres eliminar a este héroe?');
     expect(heroesService.deleteHero).toHaveBeenCalledWith(id);
-    expect(component.heroes.length).toBe(1);  
+    expect(heroesService.getHeroesByPage).toHaveBeenCalledWith(1);
+    expect(heroesService.getTotalPages).toHaveBeenCalled();
+
   });
 
   it(' no debería eliminar un héroe al llamar a onDeleteHero', () => {

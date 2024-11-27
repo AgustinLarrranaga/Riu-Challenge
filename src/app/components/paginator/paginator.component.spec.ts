@@ -24,14 +24,6 @@ describe('PaginatorComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('debería inicializar totalPages utilizando HeroesService', () => {
-    mockHeroesService.getTotalPages.and.returnValue(5);
-
-    component.ngOnInit();
-
-    expect(mockHeroesService.getTotalPages).toHaveBeenCalled();
-    expect(component.totalPages).toBe(5);
-  });
 
   it('debería incrementar currentPage y emitir pageChanged al llamar a nextPage si no está deshabilitado', () => {
     component.totalPages = 5;
