@@ -47,6 +47,10 @@ Antes de comenzar, asegúrate de tener instalado:
 
 ---
 
+## **Autor**
+
+Agustin Larrañaga
+
 ## **Instalación**
 
 1. **Clonar el repositorio**:
@@ -55,9 +59,12 @@ Antes de comenzar, asegúrate de tener instalado:
    cd heroes-app
 
 
-## **Autor**
+## **Ejecucion**
 
-Agustin Larrañaga
+1. **Correr el proyecto**:
+   ```bash
+   npm i (si falla se puede ejecutar el comando npm i --legacy-peer-deps)
+   npm start
 
 ## **Pruebas**
 
