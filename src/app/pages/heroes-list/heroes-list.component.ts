@@ -43,7 +43,6 @@ export class HeroesListComponent {
     if (confirmDelete) {
       this.heroesService.deleteHero(id)
       this.heroes = this.heroesService.getHeroesByPage(this.currentPage)
-
     }
   }
 }
