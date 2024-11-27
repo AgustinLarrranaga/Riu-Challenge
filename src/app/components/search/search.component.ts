@@ -11,11 +11,8 @@ export class SearchComponent {
 
   searchForm: FormGroup
   @Output() search = new EventEmitter<any>()
-
-
   
   constructor (
-    private heroesService: HeroesService,
     private fb: FormBuilder
   ){
     this.searchForm = this.fb.group({
