@@ -65,9 +65,9 @@ Usamos Jasmine y Karma para probar los componentes y servicios.
 
 Ejecuta las pruebas:
 
-bash
+   ```bash
+   ng test
 
-ng test
 
 ## **Autores**
 
