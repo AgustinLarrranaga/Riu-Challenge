@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';  
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';  
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesListComponent } from './pages/heroes-list/heroes-list.component';
@@ -12,23 +12,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeroesListComponent,
-    PaginatorComponent,
-    SearchComponent,
-    AddHeroButtonComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,  
-    ReactiveFormsModule, 
-    BrowserAnimationsModule,
-    MatProgressSpinnerModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeroesListComponent,
+        PaginatorComponent,
+        SearchComponent,
+        AddHeroButtonComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatProgressSpinnerModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
