@@ -33,6 +33,6 @@
     </div>
   </div>
   
-  <app-paginator [disable]="paginatorDisable" (pageChanged)="onPageChanged($event)"></app-paginator>
+  <app-paginator [disable]="paginatorDisable"  [totalPages]="totalPages" (pageChanged)="onPageChanged($event)"></app-paginator>
 
 </div>

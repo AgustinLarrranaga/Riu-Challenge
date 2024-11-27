@@ -13,12 +13,14 @@ export class HeroesListComponent {
   paginatorDisable: boolean = false
   loading : boolean = true
   currentPage : number = 1
+  totalPages : number = 1
 
   constructor(private heroesService: HeroesService) { }
 
   ngOnInit(): void {
     this.heroesService.loadHeroes().then(() => {
       this.heroes = this.heroesService.getHeroesByPage(this.currentPage);
+      this.totalPages = this.heroesService.getTotalPages()
       this.loading = false
     });
   }
@@ -43,6 +45,8 @@ export class HeroesListComponent {
     if (confirmDelete) {
       this.heroesService.deleteHero(id)
       this.heroes = this.heroesService.getHeroesByPage(this.currentPage)
+      this.totalPages = this.heroesService.getTotalPages()
+
     }
   }
 }

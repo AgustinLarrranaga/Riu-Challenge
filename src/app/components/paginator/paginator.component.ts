@@ -5,19 +5,17 @@ import { HeroesService } from 'src/app/services/heroes.service';
   selector: 'app-paginator',
   templateUrl: './paginator.component.html',
 })
-export class PaginatorComponent implements OnInit {
+export class PaginatorComponent {
 
   currentPage: number = 1
-  totalPages: number = 0
+  @Input() totalPages: number = 1
   @Input() disable : boolean = false
 
   constructor(private heroesService: HeroesService) { }
 
   @Output() pageChanged = new EventEmitter<number>(); 
 
-  ngOnInit(){
-    this.totalPages = this.heroesService.getTotalPages()
-  }
+
 
   nextPage(): void {
     if (this.currentPage < this.totalPages && !this.disable) {
